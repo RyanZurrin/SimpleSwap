@@ -1,15 +1,20 @@
-# avalanche-amm
+# SimpleSwap-amm
 
-Steps to run the application in your local machine:-
+Steps to run the application in your local linux machine:-
 * Clone this repo:
 ```text
-git clone https://github.com/SayanKar/avalanche-amm.git
+git clone https://github.com/RyanZurrin/SimpleSwap
 ```
-* Move in the `avalance-amm` directory and install all the dependencies:
+* Move in the `SimpleSwap` directory and install all the dependencies:
 ```text
 npm install
 ```
 * Run the application:
 ```text
+export NODE_OPTIONS=--openssl-legacy-provider 
 npm start
+```
+In browser connect to react app
+```
+http://localhost:3000
 ```
