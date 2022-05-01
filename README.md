@@ -1,4 +1,4 @@
-# avalanche-amm
+# SimpleSwap-amm
 
 Steps to run the application in your local machine:-
 * Clone this repo:
