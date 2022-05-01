@@ -1,7 +1,7 @@
 export const PRECISION = 1000000;
 export const RE = /^[0-9]*[.]?[0-9]{0,6}$/;
 // Replace the below address with the address of the contract you deployed 
-export const CONTRACT_ADDRESS = "0xc2fF051BEA1f4cE0BA632e1B90C35597E9c7fbcd";
+export const CONTRACT_ADDRESS = "0x5844686c9d9f1bA3c35C81a806fa9D5e5063A74e";
 export const abi = [
     {
         "inputs": [

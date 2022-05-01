@@ -301,6 +301,16 @@ svg {
     padding: 0px 30px;
 }
 
+.footer {
+    height: 50px;
+    background-color: #0e0e10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0px 30px;
+}
+
 .appName {
     font-size: 28px;
     font-weight: 800;
