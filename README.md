@@ -3,9 +3,9 @@
 Steps to run the application in your local machine:-
 * Clone this repo:
 ```text
-git clone https://github.com/SayanKar/avalanche-amm.git
+git clone https://github.com/RyanZurrin/SimpleSwap
 ```
-* Move in the `avalance-amm` directory and install all the dependencies:
+* Move in the `SimpleSwap` directory and install all the dependencies:
 ```text
 npm install
 ```
