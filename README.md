@@ -11,5 +11,6 @@ npm install
 ```
 * Run the application:
 ```text
+export NODE_OPTIONS=--openssl-legacy-provider
 npm start
 ```
