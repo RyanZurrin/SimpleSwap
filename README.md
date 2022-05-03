@@ -11,8 +11,9 @@ npm install
 ```
 * Run the application:
 ```text
-export NODE_OPTIONS=--openssl-legacy-provider 
+
 npm start
+// if you get error use this: export NODE_OPTIONS=--openssl-legacy-provider 
 ```
 In browser connect to react app
 ```
