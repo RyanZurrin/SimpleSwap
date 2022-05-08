@@ -16,7 +16,7 @@ html,
 body,
 .pageBody,
 #root {
-    height: 100%;
+    height: 96%;
     background: linear-gradient(180deg, #242525 0%, #000 180%);
 }
 
@@ -329,7 +329,7 @@ img {
 }
 
 .footer {
-    height: 70px;
+    height: 100px;
     /*change margin color*/
     padding-top: 20px;
 
@@ -396,7 +396,18 @@ img {
         border: 1px solid #4caf50;
         border-radius: 15px;
     }
+    html,
+    body,
+    .pageBody,
+    #root {
+    height: 100%;
+    background: linear-gradient(180deg, #242525 0%, #000 180%);
+    }
+    .footer {
+        display: none;
+    }
 }
+
 @media only screen and (max-width: 880px) {
     .connected {
         top: 0px;
@@ -417,30 +428,34 @@ img {
     }
     .tabBody {
         margin: 0px auto;
+        padding:  0px, 20px;
         /*make the tabs smaller*/
         width: 100%;
     }
     .details {
         position: relative;
-        display: flex;
         justify-content: center;
         width: 100%;
     }
     .detailsBody {
+        padding:  0px, -20px;
         width: 100%
     }
     .navBar {
+        width: 100%;
         justify-content: flex-start;
     }
     .connected {
         display: none;
     }
 }
+
 @media only screen and (max-width: 400px) {
     .appName {
         font-size: 20px;
     }
 }
+
 @media only screen and (max-width: 300px) {
     img {
         display: none;
