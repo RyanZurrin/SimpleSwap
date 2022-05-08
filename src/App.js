@@ -41,7 +41,10 @@ export default function App() {
 
     return (
         <div className="pageBody">
+            
             <div className="navBar">
+                
+            <img src="logo.png"></img> 
                 <div className="appName"> SimpleSwapV1 </div>
                 {myContract === null ? (
                     <div className="connectBtn" onClick={() => connect()}>

@@ -83,7 +83,7 @@ body,
     border-radius: 19px;
     position: relative;
     overflow: hidden;
-    border: 2px solid grey;
+    border: 2px solid #6ab4e5;
 }
 .boxStyle2 {
     display: flex;
@@ -115,13 +115,14 @@ body,
 .btn {
     background-color: #242525;
     margin: 10px 30px;
-    color: white;
+    color: #6ab4e5;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     width: 100px;
-    height: 40px;
+    height: 45px;
     border-radius: 9px;
     cursor: pointer;
 }
@@ -152,6 +153,15 @@ body,
 }
 .center {
     text-align: center;
+}
+
+.avex {
+    /*make the hyperlink text light blue and bold and bigger*/
+    color: #6ab4e5;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    
 }
 
 .tabStyle {
@@ -300,6 +310,16 @@ svg {
     color: white;
     padding: 0px 30px;
 }
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#logoImage {
+    /*no padding or margin*/
+    padding: 0px;
+    margin: 0px;
+}
 
 .footer {
     height: 50px;
@@ -312,8 +332,11 @@ svg {
 }
 
 .appName {
-    font-size: 28px;
-    font-weight: 800;
+    color: #6ab4e5;
+    /* make a fancy font */
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 1000;
 }
 
 .error {
