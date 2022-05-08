@@ -222,16 +222,17 @@ svg {
 
 .connected {
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 20px;
     background-color: #4caf50;
     color: white;
+    font-size: 73%;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 10px 5px 10px;
-    border: 1px solid #2a722c;
+    padding: 10px 15x 10px 10px;
+    border: 3px solid #4caf50;
     border-radius: 15px;
 }
 
@@ -346,7 +347,7 @@ img {
     padding: 0px 20px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1250px) {
     .centerBody {
         display: block;
     }
@@ -368,5 +369,33 @@ img {
     }
     .navBar {
         justify-content: flex-start;
+    }
+
+    .connected {
+        /* move the connected button below the details */
+        position: absolute;
+        right: 22%;
+        top: 30px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 60%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 8x 5px 6px;
+        border: 1px solid #4caf50;
+        border-radius: 15px;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .connected {
+        top: 0px;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .connected {
+        display: none;
     }
 }
