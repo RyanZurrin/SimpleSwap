@@ -24,6 +24,7 @@ body,
     margin: 0px auto;
     width: 500px;
     padding-top: 5px;
+    margin-bottom: 0px;
     justify-content: center;
     align-items: center;
     border-radius: 0px 0px 19px 19px;
@@ -160,8 +161,13 @@ body,
     color: #6ab4e5;
     font-weight: 700;
     text-decoration: none;
+    font-size: 20px;    
+}
+.avex:hover {
+    color: #00adef;
+    font-weight: 700;
+    text-decoration: none;
     font-size: 20px;
-    
 }
 
 .tabStyle {
@@ -323,7 +329,10 @@ img {
 }
 
 .footer {
-    height: 50px;
+    height: 70px;
+    /*change margin color*/
+    padding-top: 20px;
+
     background-color: #0e0e10;
     display: flex;
     justify-content: center;
@@ -395,7 +404,49 @@ img {
 }
 
 @media only screen and (max-width: 512px) {
+    .centerBody {
+        display: block;
+        /* make the details block the same width as the center block */
+        width: 100%;
+    }
+    .selectTab {
+        margin: 0px auto;
+        margin-top: 10px;
+        /*make the tabs smaller*/
+        width: 100%;
+    }
+    .tabBody {
+        margin: 0px auto;
+        /*make the tabs smaller*/
+        width: 100%;
+    }
+    .details {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .detailsBody {
+        width: 100%
+    }
+    .navBar {
+        justify-content: flex-start;
+    }
     .connected {
         display: none;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .appName {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    img {
+        display: none;
+    }
+    .tabStyle {
+        width: 100%;
+        font-size: smaller;
     }
 }
