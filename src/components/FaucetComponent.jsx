@@ -4,15 +4,15 @@ import BoxTemplate from "./BoxTemplate";
 import { PRECISION } from "../constants";
 
 export default function FaucetComponent(props) {
-    const [amountOfKar, setAmountOfKar] = useState(0);
-    const [amountOfKothi, setAmountOfKothi] = useState(0);
+    const [amountOfREZ, setAmountOfREZ] = useState(0);
+    const [amountOfABR, setAmountOfABR] = useState(0);
 
-    const onChangeAmountOfKothi = (e) => {
-        setAmountOfKothi(e.target.value);
+    const onChangeAmountOfABR = (e) => {
+        setAmountOfABR(e.target.value);
     };
 
-    const onChangeAmountOfKar = (e) => {
-        setAmountOfKar(e.target.value);
+    const onChangeAmountOfREZ = (e) => {
+        setAmountOfREZ(e.target.value);
     };
 	
     // Funds the account with given amount of Tokens 
@@ -21,19 +21,19 @@ export default function FaucetComponent(props) {
             alert("Connect to Metamask");
             return;
         }
-        if (["", "."].includes(amountOfKar) || ["", "."].includes(amountOfKothi)) {
+        if (["", "."].includes(amountOfREZ) || ["", "."].includes(amountOfABR)) {
             alert("Amount should be a valid number");
             return;
         }
         try {
             let response = await props.contract.faucet(
-                amountOfKar * PRECISION,
-                amountOfKothi * PRECISION
+                amountOfREZ * PRECISION,
+                amountOfABR * PRECISION
             );
             let res = await response.wait();
             console.log("res", res);
-            setAmountOfKar(0);
-            setAmountOfKothi(0);
+            setAmountOfREZ(0);
+            setAmountOfABR(0);
             await props.getHoldings();
             alert("Success");
         } catch (err) {
@@ -47,14 +47,14 @@ export default function FaucetComponent(props) {
             <BoxTemplate
                 leftHeader={"Amount of REZ"}
                 right={"REZ"}
-                value={amountOfKar}
-                onChange={(e) => onChangeAmountOfKar(e)}
+                value={amountOfREZ}
+                onChange={(e) => onChangeAmountOfREZ(e)}
             />
             <BoxTemplate
                 leftHeader={"Amount of ABR"}
                 right={"ABR"}
-                value={amountOfKothi}
-                onChange={(e) => onChangeAmountOfKothi(e)}
+                value={amountOfABR}
+                onChange={(e) => onChangeAmountOfABR(e)}
             />
             <div className="bottomDiv">
                 <div className="btn" onClick={() => onClickFund()}>

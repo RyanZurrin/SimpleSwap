@@ -8,11 +8,11 @@ import { PRECISION } from "../constants";
 
 export default function ContainerComponent(props) {
     const [activeTab, setActiveTab] = useState("Swap");
-    const [amountOfKAR, setAmountOfKAR] = useState(0);
-    const [amountOfKOTHI, setAmountOfKOTHI] = useState(0);
+    const [amountOfREZ, setAmountOfREZ] = useState(0);
+    const [amountOfABR, setAmountOfABR] = useState(0);
     const [amountOfShare, setAmountOfShare] = useState(0);
-    const [totalKAR, setTotalKAR] = useState(0);
-    const [totalKOTHI, setTotalKOTHI] = useState(0);
+    const [totalREZ, setTotalREZ] = useState(0);
+    const [totalABR, setTotalABR] = useState(0);
     const [totalShare, setTotalShare] = useState(0);
 
     useEffect(() => {
@@ -24,13 +24,13 @@ export default function ContainerComponent(props) {
         try {
             console.log("Fetching holdings----");
             let response = await props.contract.getMyHoldings();
-            setAmountOfKAR(response.amountToken1 / PRECISION);
-            setAmountOfKOTHI(response.amountToken2 / PRECISION);
+            setAmountOfREZ(response.amountToken1 / PRECISION);
+            setAmountOfABR(response.amountToken2 / PRECISION);
             setAmountOfShare(response.myShare / PRECISION);
 
             response = await props.contract.getPoolDetails();
-            setTotalKAR(response[0] / PRECISION);
-            setTotalKOTHI(response[1] / PRECISION);
+            setTotalREZ(response[0] / PRECISION);
+            setTotalABR(response[1] / PRECISION);
             setTotalShare(response[2] / PRECISION);
         } catch (err) {
             console.log("Couldn't Fetch holdings", err);
@@ -108,11 +108,11 @@ export default function ContainerComponent(props) {
                     <div className="detailsHeader">Details</div>
                     <div className="detailsRow">
                         <div className="detailsAttribute">Amount of REZ:</div>
-                        <div className="detailsValue">{amountOfKAR}</div>
+                        <div className="detailsValue">{amountOfREZ}</div>
                     </div>
                     <div className="detailsRow">
                         <div className="detailsAttribute">Amount of ABR:</div>
-                        <div className="detailsValue">{amountOfKOTHI}</div>
+                        <div className="detailsValue">{amountOfABR}</div>
                     </div>
                     <div className="detailsRow">
                         <div className="detailsAttribute">Your Share:</div>
@@ -121,11 +121,11 @@ export default function ContainerComponent(props) {
                     <div className="detailsHeader">Pool Details</div>
                     <div className="detailsRow">
                         <div className="detailsAttribute">Total REZ:</div>
-                        <div className="detailsValue">{totalKAR}</div>
+                        <div className="detailsValue">{totalREZ}</div>
                     </div>
                     <div className="detailsRow">
                         <div className="detailsAttribute">Total ABR:</div>
-                        <div className="detailsValue">{totalKOTHI}</div>
+                        <div className="detailsValue">{totalABR}</div>
                     </div>
                     <div className="detailsRow">
                         <div className="detailsAttribute">Total Shares:</div>
